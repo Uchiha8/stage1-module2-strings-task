@@ -31,7 +31,7 @@ public class MethodParser {
         String methodName = null;
         List<MethodSignature.Argument> arguments =  new ArrayList<>();
 
-        if ((parts[0].equals("public") || parts[0].equals("private") || parts[0].equals("protected"))) {
+        if ((parts[0].equals("public") || parts[0].equals("private") || parts[0].equals("protected")) || parts[0].equals("")) {
             accessModifier = parts[index++];
         }
 
