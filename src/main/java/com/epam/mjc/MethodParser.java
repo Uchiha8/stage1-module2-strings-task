@@ -26,10 +26,10 @@ public class MethodParser {
         String[] parts = signatureString.split("\\s+|\\(|\\)|,");
         int index = 0;
 
-        String accessModifier = "";
+        String accessModifier = null;
         String returnType = null;
         String methodName = null;
-        List<MethodSignature.Argument> arguments = new ArrayList<>();
+        List<MethodSignature.Argument> arguments =  new ArrayList<>();
 
         if ((parts[0].equals("public") || parts[0].equals("private") || parts[0].equals("protected"))) {
             accessModifier = parts[index++];
